@@ -1,0 +1,96 @@
+\documentclass{article}
+
+% latex packages, feel free to add more here like 'tikz'
+\usepackage{style/conference}
+\usepackage{opensans}
+\usepackage{graphicx}
+\graphicspath{{./figures/}}
+\usepackage[sorting=none]{biblatex}
+\usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+
+% to reference, paste the BibTeX obtained from google scholar into references.bib
+\addbibresource{references.bib}
+\input{style/math_commands.tex}
+
+% replace this title with your own
+\title{A Variational Autoencoder to Generate Winged Horses}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+    This paper proposes using a convolutional variational autoencoder to generate winged horse (Pegasus) images. To achieve this a variational autoencoder is trained on a images of horses and birds to learn a distribution over the data that permits sampling. The experiments performed suggest that this approach is poor at producing these images and produces blurry images that slightly resemble winged horses.
+\end{abstract}
+% this is where the sections begin
+\section{Methodology}
+\subsection{Model}
+The model used is a convolutional variation autoencoder (VAE)~\cite{vae} this model was chosen as it is a generative model that produces a structured latent space by feeding in input data, allowing for a better understanding of the latent space when compared with a GAN~\cite{latent}. Variational autoencoders work by learning a distribution over the input data and imposing and additional prior distribution over the latent space $p(\bm{Z})$. This distribution is usually, and in the case of this paper, the standard normal distribution meaning $\bm{Z}\sim\mathcal{N}(\textbf{0}, \bm{\mathit{I}})$. This prior is imposed over the learned distribution in an attempt to force a continuous latent space that can be sampled from, as a normal autoencoder could have gaps in the latent space that produce meaningless results when decoded. In order to impose this prior the architecture of a normal autoencoder is modified as described in~\cite{vae} that is rather than the encoder network encoding to latent space $\bm{Z}$ it learns a distribution of encodings for each input parameterised by a mean vector $\bm{\mu}$ and standard deviation vector $\bm{\sigma}$. On every forward pass through the decoder these are combined in a random manner to generate the encoding of the input thus learning a continuous latent space. The manner in which they are combined according to $\bm{z}=\bm{\mu} +\bm{\sigma}\odot\epsilon$ where $\epsilon\sim\mathcal{N}(\bf{0}, \bm{\mathit{I}})$. This is illustrated below in \autoref{fig:arch}:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{vae}
+    \caption{Diagram of VAE arhcitecture}
+    \label{fig:arch}
+\end{figure}
+\par
+The encoder and decoder are both convolutional neural networks (CNN), with 4 convolutional layers and 4 fully connected layers in the encoder and 4 de-convolutional layers and 4 fully connected layers in the decoder. The large number of fully connected layers were used so that after extracting features from the input image using the convolutional layers the network can better learn how these features represent the input images. Qualitative testing showed that random samples from the model had much more realistic colours when compared with the model without the fully connected layers. Between convolutional layers batch normalisation was used as it has been shown to improve convergence time when training as well as act as a normalisation factor~\cite{batch}. The networks activation layers were also chosen to be leaky rectified linear activation units (Leaky ReLU) rather than standard linear rectified activation units (ReLU) as empirical studies have shown that these outperform ReLUs in terms of accuracy~\cite{relu}.
+\subsection{Loss Function}
+The loss function being minimised for the VAE is as described in~\cite{vae}:
+\begin{equation}
+    \mathcal{L}_{VAE}=
+    -\mathbb{E}_{q(\bm{Z}|\bm{X})}[\log p(\bm{X}|\bm{Z})]
+    +D_{KL}(q(\bm{Z}|\bm{X})||p(\bm{Z}))
+\end{equation}
+where $D_{KL}$ is the Kullback-Leibler divergence and $-\mathbb{E}_{q(\bm{Z}|\bm{X})}$ is the negated expected log-likelihood for each pixel. The negated log-likelihood is equivalent to cross-entropy therefore in the model cross entropy is used in its place. There also exists a closed form solution to $D_{KL}$ as described in~\cite{vae} for the Gaussian distributions such as $\mathcal{N}(\bf{0}, \bm{\mathit{I}})$ being used in the model. It is:
+\begin{equation}
+    D_{KL}=
+    -\frac{1}{2}\sum^{J}_{j=1}
+    (1+\log((\sigma_j)^2)-
+    (\mu_j)^2-
+    (\sigma_j)^2
+    )
+\end{equation}
+The cross-entropy portion of the loss function is a measure of how similar the reconstructed image $\bm{\hat{X}}$ is to the original image $\bm{X}$ whereas the $D_{KL}$ is used to force the resultant encoding distribution to be as close to $\mathcal{N}(\bm{0},\bm{I})$ as possible.
+\subsection{Training}
+In order to generate the winged horses the model was trained on a mix of the STL-10 dataset~\cite{stl} (resized to 32x32 pixels) and the CIFAR-10 datset~\cite{cifar}. The model was first trained for 100 epochs on the full combined datasets as recommended by~\cite{stl-web} this is done to build a useful prior distribution and learn a diverse set of features for image generation. After this all labelled examples if horses and birds were extracted from the datasets and combined into a new dataset of only horses and birds. The model was then trained on this dataset for 300 more epochs, in order to generate a latent space $\bm{Z}$ that encodes a wide range of features related to horse and bird images, such as wing shape and colour. The optimiser used for the training was the Adam optimiser~\cite{adam} as is standard in the field.
+\subsection{Sampling}
+There are many approaches to sampling from the latent space $\bm{Z}$, the most naive method would be to randomly sample from the latent space and then decode the samples. If done enough times it is possible that a good image of a winged horse would eventually be produced. However it would be better to take advantage of the structured latent space somehow. Three sampling methods are described in~\cite{sampl}, the most desirable of these would be to take advantage of vector mathematics within the latent space to create an "analogy" vector representing wings within the latent space. This wing vector could then be added to any latent space representation of a horse to generate a winged horse. This was not done as the datasets contained very few images of birds that had wings outstretched clearly and none were labeled as such so this would have required manually picking out all images of birds in flight from a dataset of 115000 images which is highly impractical. Instead interpolation was used to generate the images. Specifically spherical interpolations were used rather than linear interpolations for the reasons stated in~\cite{sampl}, these are that due to the large number of dimensions in the latent space meaning the mid point between 2 points in the space will be many standard deviations from the mean value. Spherical interpolations address this problem by treating the interpolation as a path on a hypersphere~\cite{sampl}. The equation used to perform these interpolations was:
+\begin{equation}
+    Slerp(q_1,q_2;\bm{\mu})=\frac{\sin[(1-\mu)\theta]}
+    {\sin\theta}q_1+
+    \frac{\sin\mu\theta}
+    {\sin\theta}q_2
+\end{equation}
+where $\theta=\arccos{q_1\cdot q_2}$ and $q_1, q_2$ are latent vectors.
+\par
+To generate the batch of 64 winged horse images from the samples a set of 8 horse images were manually selected from the dataset and a set of 21 bird images were also selected. For each horse image a bird image was randomly selected from the bird set and then spherical interpolations were performed with $\mu$ being 8 evenly spaced values from the interval $[0.4, 0.7]$, this interval was chosen as qualitatively it produced results that neither looked completely like the bird or horse image bu instead was clearly a merger of the 2.
+\section{Results}
+The best batch of winged horses is shown in \autoref{fig:pegs}. The results are quite noisy but nowhere near as much as with a normal autoencoder. The diversity of the batch is not great, however that is to be expected due to the sampling method used to generate the batch, as each row is an interpolation between 2 images so all images in said row will be similar. The vast majority of the images in the sample are white, and the images on rows 4 and 5 do look like winged horses with a small stretch of the imagination.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{pegs}
+    \caption{Best batch of 64 winged horses from spherical interpolations}
+    \label{fig:pegs}
+\end{figure}
+The best winged horse image from \autoref{fig:pegs} is shown in \autoref{fig:best}
+\begin{figure}[h]
+    \centering
+    \includegraphics{Best_peg}
+    \caption{Best Pegasus image from batch}
+    \label{fig:best}
+\end{figure}
+This depicts a white horse looking at you with its head located in the centre of the image and a clear wing shape in the upper right as well as a less clear wing to the left.
+\section{Limitations}
+The obvious limitation of the approach presented in this paper is the apparent "blurriness" of the generated images. This blur is actually noise that is caused by using a VAE and manner in which VAEs approximate maximum likelihood~\cite{blur}.
+\par
+The model also only generates 32x32 pixel images this is due to it only being trained on CIFAR-10 which is already 32x32 and STL-10 which had been resized to 32x32 as a preprocessing step. This was done as training the model on the full resolution (96x96) images from STL-10 took an extremely long amount of time which was not practical due to time constraints.
+\par
+The chosen sampling method (spherical interpolations) although good was in itself a limitation as better sampling methods for VAEs exist such as Adversarially Constrained Autoencoder Interpolation~\cite{acai}. Unfortunately this method of interpolation is an adversarial method thus would incur the -4 point penalty if used, this may have produced more realistic results but there was no way of knowing if they would be better enough to balance the penalty.
+\par
+Both CIFAR-10 and STL-10 are very poor datasets with regard to bird images. As a large number of such images are of bird heads or birds that are not in flight (wings not outstretched). This made training the model to represent wings in its latent space very difficult as very few images had those desirable features. For better results a dataset with labeled examples of birds in flight would be far more appropriate.
+\section*{Bonuses}
+The submission should have a total bonus of +1 as both CIFAR-10 and STL-10 were used albeit at a reduced resolution and nearly all winged horses in the batch (\autoref{fig:pegs}) are white.
+
+% you can have an unlimited number of references (they can go on the 5th page and span many additional pages without any penalty)
+\printbibliography
+\end{document}

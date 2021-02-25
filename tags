@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/30cd8e0/
+Bonuses	DL/report/paper.tex	/^\\section*{Bonuses}$/;"	s
+Limitations	DL/report/paper.tex	/^\\section{Limitations}$/;"	s
+Loss Function	DL/report/paper.tex	/^\\subsection{Loss Function}$/;"	u	section:Methodology
+Methodology	DL/report/paper.tex	/^\\section{Methodology}$/;"	s
+Model	DL/report/paper.tex	/^\\subsection{Model}$/;"	u	section:Methodology
+Results	DL/report/paper.tex	/^\\section{Results}$/;"	s
+Sampling	DL/report/paper.tex	/^\\subsection{Sampling}$/;"	u	section:Methodology
+Training	DL/report/paper.tex	/^\\subsection{Training}$/;"	u	section:Methodology
+\\Cov	DL/report/style/math_commands.tex	/^\\newcommand{\\Cov}{\\mathrm{Cov}}$/;"	C
+\\E	DL/report/style/math_commands.tex	/^\\newcommand{\\E}{\\mathbb{E}}$/;"	C
+\\KL	DL/report/style/math_commands.tex	/^\\newcommand{\\KL}{D_{\\mathrm{KL}}}$/;"	C
+\\Ls	DL/report/style/math_commands.tex	/^\\newcommand{\\Ls}{\\mathcal{L}}$/;"	C
+\\Pmodel	DL/report/style/math_commands.tex	/^\\newcommand{\\Pmodel}{P_{\\rm{model}}}$/;"	C
+\\Ptrain	DL/report/style/math_commands.tex	/^\\newcommand{\\Ptrain}{\\hat{P}_{\\rm{data}}}$/;"	C
+\\R	DL/report/style/math_commands.tex	/^\\newcommand{\\R}{\\mathbb{R}}$/;"	C
+\\Var	DL/report/style/math_commands.tex	/^\\newcommand{\\Var}{\\mathrm{Var}}$/;"	C
+\\captiona	DL/report/style/math_commands.tex	/^\\newcommand{\\captiona}{{\\em (a)}}$/;"	C
+\\captionb	DL/report/style/math_commands.tex	/^\\newcommand{\\captionb}{{\\em (b)}}$/;"	C
+\\captionc	DL/report/style/math_commands.tex	/^\\newcommand{\\captionc}{{\\em (c)}}$/;"	C
+\\captiond	DL/report/style/math_commands.tex	/^\\newcommand{\\captiond}{{\\em (d)}}$/;"	C
+\\emp	DL/report/style/math_commands.tex	/^\\newcommand{\\emp}{\\tilde{p}}$/;"	C
+\\etens	DL/report/style/math_commands.tex	/^\\newcommand{\\etens}[1]{\\mathsfit{#1}}$/;"	C
+\\figbottom	DL/report/style/math_commands.tex	/^\\newcommand{\\figbottom}{{\\em (Bottom)}}$/;"	C
+\\figcenter	DL/report/style/math_commands.tex	/^\\newcommand{\\figcenter}{{\\em (Center)}}$/;"	C
+\\figleft	DL/report/style/math_commands.tex	/^\\newcommand{\\figleft}{{\\em (Left)}}$/;"	C
+\\figright	DL/report/style/math_commands.tex	/^\\newcommand{\\figright}{{\\em (Right)}}$/;"	C
+\\figtop	DL/report/style/math_commands.tex	/^\\newcommand{\\figtop}{{\\em (Top)}}$/;"	C
+\\laplace	DL/report/style/math_commands.tex	/^\\newcommand{\\laplace}{\\mathrm{Laplace}} % Laplace distribution$/;"	C
+\\lr	DL/report/style/math_commands.tex	/^\\newcommand{\\lr}{\\alpha}$/;"	C
+\\newterm	DL/report/style/math_commands.tex	/^\\newcommand{\\newterm}[1]{{\\bf #1}}$/;"	C
+\\normlone	DL/report/style/math_commands.tex	/^\\newcommand{\\normlone}{L^1}$/;"	C
+\\normlp	DL/report/style/math_commands.tex	/^\\newcommand{\\normlp}{L^p}$/;"	C
+\\normltwo	DL/report/style/math_commands.tex	/^\\newcommand{\\normltwo}{L^2}$/;"	C
+\\normlzero	DL/report/style/math_commands.tex	/^\\newcommand{\\normlzero}{L^0}$/;"	C
+\\normmax	DL/report/style/math_commands.tex	/^\\newcommand{\\normmax}{L^\\infty}$/;"	C
+\\parents	DL/report/style/math_commands.tex	/^\\newcommand{\\parents}{Pa} % See usage in notation.tex. Chosen to match Daphne's book.$/;"	C
+\\pdata	DL/report/style/math_commands.tex	/^\\newcommand{\\pdata}{p_{\\rm{data}}}$/;"	C
+\\pdecode	DL/report/style/math_commands.tex	/^\\newcommand{\\pdecode}{p_{\\rm{decoder}}}$/;"	C
+\\pencode	DL/report/style/math_commands.tex	/^\\newcommand{\\pencode}{p_{\\rm{encoder}}}$/;"	C
+\\pmodel	DL/report/style/math_commands.tex	/^\\newcommand{\\pmodel}{p_{\\rm{model}}}$/;"	C
+\\precons	DL/report/style/math_commands.tex	/^\\newcommand{\\precons}{p_{\\rm{reconstruct}}}$/;"	C
+\\ptildemodel	DL/report/style/math_commands.tex	/^\\newcommand{\\ptildemodel}{\\tilde{p}_{\\rm{model}}}$/;"	C
+\\ptrain	DL/report/style/math_commands.tex	/^\\newcommand{\\ptrain}{\\hat{p}_{\\rm{data}}}$/;"	C
+\\rect	DL/report/style/math_commands.tex	/^\\newcommand{\\rect}{\\mathrm{rectifier}}$/;"	C
+\\reg	DL/report/style/math_commands.tex	/^\\newcommand{\\reg}{\\lambda}$/;"	C
+\\sigmoid	DL/report/style/math_commands.tex	/^\\newcommand{\\sigmoid}{\\sigma}$/;"	C
+\\softmax	DL/report/style/math_commands.tex	/^\\newcommand{\\softmax}{\\mathrm{softmax}}$/;"	C
+\\softplus	DL/report/style/math_commands.tex	/^\\newcommand{\\softplus}{\\zeta}$/;"	C
+\\standarderror	DL/report/style/math_commands.tex	/^\\newcommand{\\standarderror}{\\mathrm{SE}}$/;"	C
+\\tens	DL/report/style/math_commands.tex	/^\\newcommand{\\tens}[1]{\\bm{\\mathsfit{#1}}}$/;"	C
+\\test	DL/report/style/math_commands.tex	/^\\newcommand{\\test}{\\mathcal{D_{\\mathrm{test}}}}$/;"	C
+\\train	DL/report/style/math_commands.tex	/^\\newcommand{\\train}{\\mathcal{D}}$/;"	C
+\\valid	DL/report/style/math_commands.tex	/^\\newcommand{\\valid}{\\mathcal{D_{\\mathrm{valid}}}}$/;"	C
+acai	DL/report/references.bib	/^@misc{acai,$/;"	n
+adam	DL/report/references.bib	/^@misc{adam,$/;"	n
+batch	DL/report/references.bib	/^@misc{batch,$/;"	n
+blur	DL/report/references.bib	/^@misc{blur,$/;"	n
+cifar	DL/report/references.bib	/^@misc{cifar,$/;"	n
+fig:arch	DL/report/paper.tex	/^    \\label{fig:arch}$/;"	l
+fig:best	DL/report/paper.tex	/^    \\label{fig:best}$/;"	l
+fig:pegs	DL/report/paper.tex	/^    \\label{fig:pegs}$/;"	l
+latent	DL/report/references.bib	/^@misc{latent,$/;"	n
+relu	DL/report/references.bib	/^@misc{relu,$/;"	n
+requests	DL/report/paper.run.xml	/^<!DOCTYPE requests [$/;"	r
+sampl	DL/report/references.bib	/^@misc{sampl,$/;"	n
+stl	DL/report/references.bib	/^@misc{stl,$/;"	n
+stl-web	DL/report/references.bib	/^@misc{stl-web,$/;"	n
+vae	DL/report/references.bib	/^@misc{vae,$/;"	n

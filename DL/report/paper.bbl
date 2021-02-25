@@ -1,0 +1,367 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{vae}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=53d2880ad8047b61cdae2c6b2803e763}{%
+           family={Welling},
+           familyi={W\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{aabdd5db7a1ed298b1dfb6824d032c66}
+      \strng{fullhash}{aabdd5db7a1ed298b1dfb6824d032c66}
+      \strng{bibnamehash}{aabdd5db7a1ed298b1dfb6824d032c66}
+      \strng{authorbibnamehash}{aabdd5db7a1ed298b1dfb6824d032c66}
+      \strng{authornamehash}{aabdd5db7a1ed298b1dfb6824d032c66}
+      \strng{authorfullhash}{aabdd5db7a1ed298b1dfb6824d032c66}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Auto-Encoding Variational Bayes}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1312.6114
+      \endverb
+    \endentry
+    \entry{latent}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=2a2e290744deae96b5e65a67d21f950f}{%
+           family={Connor},
+           familyi={C\bibinitperiod},
+           given={Marissa\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9c06f1166048529cb27e50150b8cad71}{%
+           family={Canal},
+           familyi={C\bibinitperiod},
+           given={Gregory\bibnamedelima H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9e3b7bd468deedacd74c412b940dbbc9}{%
+           family={Rozell},
+           familyi={R\bibinitperiod},
+           given={Christopher\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c8b9517eb4c32849251cc9c62a2371a}
+      \strng{fullhash}{6c8b9517eb4c32849251cc9c62a2371a}
+      \strng{bibnamehash}{6c8b9517eb4c32849251cc9c62a2371a}
+      \strng{authorbibnamehash}{6c8b9517eb4c32849251cc9c62a2371a}
+      \strng{authornamehash}{6c8b9517eb4c32849251cc9c62a2371a}
+      \strng{authorfullhash}{6c8b9517eb4c32849251cc9c62a2371a}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Variational Autoencoder with Learned Latent Structure}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2006.10597
+      \endverb
+    \endentry
+    \entry{batch}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=5543e82359e26b035efc009cb3efff9d}{%
+           family={Ioffe},
+           familyi={I\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{fullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{bibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorbibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authornamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorfullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1502.03167
+      \endverb
+    \endentry
+    \entry{relu}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7b94afca49a5fad9a08434bbb6abf1ce}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Naiyan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=48461ccdf50ba5a54e29a354aa734c0b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Tianqi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c4a02f87e51fc72ab3f841de1a3982a7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Mu},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{070ef871c1684789344f844eea89b4e5}
+      \strng{fullhash}{bae11344e4dd597130a8235917d040c9}
+      \strng{bibnamehash}{070ef871c1684789344f844eea89b4e5}
+      \strng{authorbibnamehash}{070ef871c1684789344f844eea89b4e5}
+      \strng{authornamehash}{070ef871c1684789344f844eea89b4e5}
+      \strng{authorfullhash}{bae11344e4dd597130a8235917d040c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Empirical Evaluation of Rectified Activations in Convolutional Network}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1505.00853
+      \endverb
+    \endentry
+    \entry{stl}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=2a6ca55dc46029c413e9054d19502b28}{%
+           family={Coates},
+           familyi={C\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d09ea8631bf43468107b5ef02c5195aa}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Honglak},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bdb4d740fc9548d1c32a62103c30169d}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd5164b3c4420e1764ac62778119d580}
+      \strng{fullhash}{dd5164b3c4420e1764ac62778119d580}
+      \strng{bibnamehash}{dd5164b3c4420e1764ac62778119d580}
+      \strng{authorbibnamehash}{dd5164b3c4420e1764ac62778119d580}
+      \strng{authornamehash}{dd5164b3c4420e1764ac62778119d580}
+      \strng{authorfullhash}{dd5164b3c4420e1764ac62778119d580}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{An Analysis of Single-Layer Networks in Unsupervised Feature Learning}
+      \field{year}{2011}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{cifar}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \strng{fullhash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \strng{bibnamehash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \strng{authorbibnamehash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \strng{authornamehash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \strng{authorfullhash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{University of Toronto}
+      \field{month}{05}
+      \field{title}{Learning Multiple Layers of Features from Tiny Images}
+      \field{year}{2012}
+    \endentry
+    \entry{stl-web}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{journaltitle}{Cs.stanford.edu}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb http://cs.stanford.edu/~acoates/stl10
+      \endverb
+      \verb{url}
+      \verb http://cs.stanford.edu/~acoates/stl10
+      \endverb
+    \endentry
+    \entry{adam}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Jimmy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Adam: A Method for Stochastic Optimization}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1412.6980
+      \endverb
+    \endentry
+    \entry{sampl}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fec0f7585932951edb687003842f3da9}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{fec0f7585932951edb687003842f3da9}
+      \strng{fullhash}{fec0f7585932951edb687003842f3da9}
+      \strng{bibnamehash}{fec0f7585932951edb687003842f3da9}
+      \strng{authorbibnamehash}{fec0f7585932951edb687003842f3da9}
+      \strng{authornamehash}{fec0f7585932951edb687003842f3da9}
+      \strng{authorfullhash}{fec0f7585932951edb687003842f3da9}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.NE}
+      \field{eprinttype}{arXiv}
+      \field{title}{Sampling Generative Networks}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1609.04468
+      \endverb
+    \endentry
+    \entry{blur}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=6a92c8ce44e2c757c2d165938a3eb7e4}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Shengjia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=78372b7167d001d4c80db2b19d6a76f3}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Jiaming},
+           giveni={J\bibinitperiod}}}%
+        {{hash=160929a7e6ceecdf3f7c9a13abd5ea35}{%
+           family={Ermon},
+           familyi={E\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{aed59b8b92146fdf4b351367ef376d2c}
+      \strng{fullhash}{aed59b8b92146fdf4b351367ef376d2c}
+      \strng{bibnamehash}{aed59b8b92146fdf4b351367ef376d2c}
+      \strng{authorbibnamehash}{aed59b8b92146fdf4b351367ef376d2c}
+      \strng{authornamehash}{aed59b8b92146fdf4b351367ef376d2c}
+      \strng{authorfullhash}{aed59b8b92146fdf4b351367ef376d2c}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Towards Deeper Understanding of Variational Autoencoding Models}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1702.08658
+      \endverb
+    \endentry
+    \entry{acai}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=2b637540293a774a612f359db2bbe654}{%
+           family={Berthelot},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=81a5a94e2388c149a73a86381db45e07}{%
+           family={Raffel},
+           familyi={R\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ce96a36a7c207405c9e5c1d141609137}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Aurko},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{091ab5ab875d8defa4e6ec9793ed20f2}
+      \strng{fullhash}{a9b5298a0d0eacd0d9426186d077a9d2}
+      \strng{bibnamehash}{091ab5ab875d8defa4e6ec9793ed20f2}
+      \strng{authorbibnamehash}{091ab5ab875d8defa4e6ec9793ed20f2}
+      \strng{authornamehash}{091ab5ab875d8defa4e6ec9793ed20f2}
+      \strng{authorfullhash}{a9b5298a0d0eacd0d9426186d077a9d2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Understanding and Improving Interpolation in Autoencoders via an Adversarial Regularizer}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1807.07543
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
